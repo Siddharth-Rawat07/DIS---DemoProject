@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Class2
+namespace ConditionalStatement
 {
     class Program
     {
