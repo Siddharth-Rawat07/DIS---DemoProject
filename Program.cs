@@ -1,59 +1,36 @@
-﻿using System;
+﻿/*
+ Author: Siddharth Rawat
+ Date: 9/10/2019
+ Comments: This C# Console application code demonstrates the use of 
+           iterations statements after getting input from users
+*/
 
-namespace ConditionalStatement
+using System;
+
+namespace Catch22
 {
     class Program
     {
         static void Main(string[] args)
         {
-
-            Console.WriteLine("How many years experience do you have ...");
+            Console.WriteLine("How many years of experience do you have?");
             try
             {
-                string input = Console.ReadLine();
-                int exp = int.Parse(input);
-                if (exp == 0)
+                int exp = int.Parse(Console.ReadLine());
+
+                for (int i = 0; i < exp; i++)
                 {
-                    Console.WriteLine("Need lots of practice");
-                    Console.ReadLine();
-                    Console.WriteLine("Press any key to exit");
-                    Console.ReadKey(true);
+                    Console.WriteLine("You have " + (i + 1).ToString() + " years of Experience");
                 }
-                else if (exp == 1)
-                {
-                    Console.WriteLine("Looks LIke you have a little experience");
-                    Console.ReadLine();
-                    Console.WriteLine("Press any key to exit");
-                    Console.ReadKey(true);
-                }
-                else if (exp == 2)
-                {
-                    Console.WriteLine("Wow! You've been doing this for a little while");
-                    Console.ReadLine();
-                    Console.WriteLine("Press any key to exit");
-                    Console.ReadKey(true);
-                }
-                else if (exp > 2)
-                {
-                    Console.WriteLine("You are an expert");
-                    Console.ReadLine();
-                    Console.WriteLine("Press any key to exit");
-                    Console.ReadKey(true);
-                }
-                else
-                {
-                    Console.WriteLine("Invalid Input Given");
-                    Console.ReadLine();
-                    Console.WriteLine("Press any key to exit");
-                    Console.ReadKey(true);
-                }
+                Console.ReadLine();
             }
             catch
             {
-                Console.WriteLine("Invalid Input Given");
-                Console.WriteLine("Press any key to exit");
-                Console.ReadKey(true);
+
+                Console.WriteLine("Invalid Input");
+                Console.ReadLine();
             }
         }
+
     }
 }
